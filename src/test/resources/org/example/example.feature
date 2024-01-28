@@ -1,5 +1,10 @@
+@allure.label.epic:Feature
+@allure.label.suite:Suite
+@allure.label.subSuite:SubSuite
 Feature: An example
 
+  @critical
+  @allure.label.jira:AE-2
   Scenario: The example
     Given User opened HOME page
     When User enters 'Gherkin' in to Name input
@@ -8,6 +13,8 @@ Feature: An example
     And User clicks by Save button
     Then The Gherkin are listed in the product table
 
+  @critical
+  @allure.label.jira:AE-2
   Scenario: The table example
     Given User opened HOME page
     When User deletes 'Cheese' from the product table

@@ -10,7 +10,8 @@ public class BeforeHooks {
     public static IScenarioContext context;
 
     @BeforeAll
-    public static void bootstrapper() {
+    public static void setUp() {
+        System.out.println("SET UP METHOD");
         context = ScenarioContext.getInstance();
         SelenideConfig.getInstance();
     }

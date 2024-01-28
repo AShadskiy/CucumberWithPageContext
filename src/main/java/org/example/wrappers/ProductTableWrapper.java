@@ -31,4 +31,8 @@ public class ProductTableWrapper implements IProductTable {
     public boolean isTableContainsProduct(String productName) {
         return $x(String.format(productRow, productName)).isDisplayed();
     }
+
+    public void ifProductIsVisible(String productName, Condition condition) {
+        $x(String.format(productRow, productName)).shouldBe(condition);
+    }
 }
